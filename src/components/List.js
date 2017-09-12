@@ -11,11 +11,13 @@ export default class List extends Component {
     let Filler = <div>&nbsp;&nbsp;</div>
     let ContList = data.map((person)=>{
       return (
+      <div className="person-info">
         <div key={person.id}>
             <Link to={`/Single/${person.id}`}><img className="img-list" src={person.picture.thumbnail} alt='myface'></img>
                 &nbsp;&nbsp;{person.name.first}&nbsp;{ person.name.last}
             </Link>
         </div>
+      </div>
       )
     })
     return (
